@@ -4,8 +4,10 @@
 <?import javafx.scene.control.Button?>
 <?import javafx.scene.control.Label?>
 <?import javafx.scene.control.TextField?>
+<?import javafx.scene.control.TextArea?>
 <GridPane fx:controller="sample.Controller"
           xmlns:fx="http://javafx.com/fxml" alignment="center" hgap="10" vgap="10">
-    <Button text="Кнопка" GridPane.columnIndex="0" GridPane.rowIndex="0" onAction="#sendHello"/>
-    <TextField GridPane.columnIndex="1" GridPane.rowIndex="0" onAction="#sendMessage" />
+    <TextArea fx:id="textArea" GridPane.columnIndex="0" GridPane.rowIndex="0" prefWidth="300"/>
+    <TextField fx:id="textField" GridPane.columnIndex="0" GridPane.rowIndex="1" onAction="#sendMessage" />
+    <Button text="Отправить" GridPane.columnIndex="1" GridPane.rowIndex="1" onAction="#sendMessage"/>
 </GridPane>
